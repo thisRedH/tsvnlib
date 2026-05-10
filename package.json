@@ -1,0 +1,42 @@
+{
+    "name": "tsvnlib",
+    "version": "0.1.0",
+    "description": "TypeScript library for interacting with SVN (Subversion) via the command-line client",
+    "keywords": ["svn", "subversion", "vcs", "typescript"],
+    "author": "thisRedH",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thisRedH/tsvnlib.git"
+    },
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./runners/node": "./dist/runners/node.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest run",
+        "test:unit": "vitest run test/unit",
+        "test:integration": "vitest run test/integration",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src"
+    },
+    "devDependencies": {
+        "@types/node": "^22",
+        "eslint": "^10.2.0",
+        "typescript": "^6.0.2",
+        "typescript-eslint": "^8.58.1",
+        "vitest": "^4.1.4"
+    },
+    "dependencies": {
+        "fast-xml-parser": "^5.5.11"
+    }
+}
