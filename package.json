@@ -22,6 +22,7 @@
         "./runners/node": "./dist/runners/node.js"
     },
     "scripts": {
+        "prepare": "tsc",
         "build": "tsc",
         "test": "vitest run",
         "test:unit": "vitest run test/unit",
